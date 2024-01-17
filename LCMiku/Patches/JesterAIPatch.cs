@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
-namespace LCMiku.Patches
+namespace LCMikuJester.Patches
 {
     [HarmonyPatch(typeof(JesterAI))]
     public static class JesterAiPatch

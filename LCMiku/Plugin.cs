@@ -3,11 +3,11 @@ using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
-using LCMiku.Patches;
+using LCMikuJester.Patches;
 using LCSoundTool;
 using UnityEngine;
 
-namespace LCMiku
+namespace LCMikuJester
 {
     [BepInPlugin(modGUID, modName, modVersion)]
     public class MikuJesterBase : BaseUnityPlugin
@@ -43,9 +43,9 @@ namespace LCMiku
             }
 
             var isEnabled = Config.Bind("Mod", "EnableMod", true, "Enables the mod, otherwise doesn't load it");
-            IntroEnabled = Config.Bind("Sound", "EnableCrankingIntro", true, "Enables the cranking to be replaced by Free Bird intro");
+            IntroEnabled = Config.Bind("Sound", "EnableCrankingIntro", true, "Enables the cranking to be replaced by Ievan Polkka intro");
             IntroVolume = Config.Bind("Sound", "IntroVolume", 50, new ConfigDescription("Sets the volume of the cranking intro (in %)", new AcceptableValueRange<int>(0, 200)));
-            SoloEnabled = Config.Bind("Sound", "EnableScreamSolo", true, "Enables the scream to be replaced by Free Bird solo");
+            SoloEnabled = Config.Bind("Sound", "EnableScreamSolo", true, "Enables the scream to be replaced by Hatsune Miku's Ievan Polkka");
             SoloVolume = Config.Bind("Sound", "SoloVolume", 100, new ConfigDescription("Sets the volume of the screaming solo (in %)", new AcceptableValueRange<int>(0, 200)));
 
             if (!isEnabled.Value)
